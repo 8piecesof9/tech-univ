@@ -1,5 +1,30 @@
-.DS_store
+# Node.js dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+.sublime-workspace
+
+# Build output
+dist/
+build/
+
+#Downloads folder
 Downloads
-node_modules
-package-lock.json
-node_modules
+
+
+#Package-lock
+Package-lock.json
