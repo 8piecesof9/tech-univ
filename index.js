@@ -30,7 +30,6 @@ app.get('/fetch-data', async (req, res) => {
 
     df.toCSV({filePath:"Downloads/result.csv",index:false,header:true})
     res.send(df)
-    df.print()
 
 
   } catch (error) {
@@ -47,20 +46,4 @@ app.listen(PORT, () => {
 });
 
 
-const transformData = (data) => {
-    return data.map((item) => {
-      // Flatten all domains into one array
-      const allDomains = [...new Set(item.Domains)];
-  
-      // Return the transformed object in the desired format
-      return {
-        "Alpha Code": item["Alpha Code"],
-        "Domains": allDomains,
-        "States": item.States,
-        "Country": item.Country,
-        "Name": item.Name,
-        "Web Pages": item["Web Pages"]
-      };
-    });
-  };
 
