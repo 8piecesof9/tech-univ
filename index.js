@@ -16,12 +16,15 @@ app.get('/fetch-data', async (req, res) => {
     // make multiple data for single key into 1 
 
     const processedData = result.map(item=>{
+
         return {
             'Alpha Code':item['alpha_two_code'],
             'Domains':item.domains.join(" | "),
             'States':item['state-province'],
             'Country':item['country'],
-            'Name':item['name'],
+            // Check if 'name' is not null or undefined before replacing commas
+                // Replace commas with colons in the 'name' field
+            'Name': item['name']? item['name'].replace(/,/g, ":") : '',
             'Web Pages':item.web_pages.join(" | ")
         }
     })
