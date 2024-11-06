@@ -1,0 +1,19 @@
+{
+  "name": "technical_assessment",
+  "version": "1.0.0",
+  "description": "GrowthAssitant Technical Assessment",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Michael Cabudol",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "danfojs-node": "^1.1.2",
+    "dataframe-js": "^1.4.4",
+    "express": "^4.21.1",
+    "superheroes": "^4.0.0"
+  }
+}
